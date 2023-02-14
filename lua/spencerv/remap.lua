@@ -41,12 +41,6 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "u", "<cmd>undo<CR>")
 vim.keymap.set("n", "U", "<cmd>redo<CR>")
 
-vim.keymap.set("n", "s", "<leader><leader>f")
-vim.keymap.set("n", "S", "<leader><leader>F")
-
-vim.keymap.set("n", "s", "<leader><leader>f")
-vim.keymap.set("n", "S", "<leader><leader>F")
-
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 

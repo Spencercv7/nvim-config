@@ -17,6 +17,11 @@ require("nvim-tree").setup({
     renderer = {
         group_empty = true,
     },
+    actions = {
+        open_file = {
+            quit_on_open = true,
+        }
+    }
 })
 
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeFindFileToggle)
