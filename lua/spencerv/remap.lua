@@ -11,10 +11,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- greatest remap ever
+-- greatest n ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- next greatest remap ever : asbjornHaland
+-- next greatest n ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
@@ -37,3 +37,16 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+
+vim.keymap.set("n", "u", "<cmd>undo<CR>")
+vim.keymap.set("n", "U", "<cmd>redo<CR>")
+
+vim.keymap.set("n", "s", "<leader><leader>f")
+vim.keymap.set("n", "S", "<leader><leader>F")
+
+vim.keymap.set("n", "s", "<leader><leader>f")
+vim.keymap.set("n", "S", "<leader><leader>F")
+
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
+
