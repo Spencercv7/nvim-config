@@ -44,3 +44,7 @@ vim.keymap.set("n", "U", "<cmd>redo<CR>")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
+vim.keymap.set("n", "<leader>h", "<cmd>:wincmd h<CR>")
+vim.keymap.set("n", "<leader>j", "<cmd>:wincmd j<CR>")
+vim.keymap.set("n", "<leader>k", "<cmd>:wincmd k<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>:wincmd l<CR>")
