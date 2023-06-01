@@ -10,5 +10,8 @@ require("nice-reference").setup({
     auto_choose = false, -- Go to reference if there is only one
 })
 
-vim.keymap.set("n", "gr", "<cmd>lua require('nice-reference').references()<CR>")
+
+if not vim.g.vscode then
+    vim.keymap.set("n", "gr", "<cmd>lua require('nice-reference').references()<CR>")
+end
 

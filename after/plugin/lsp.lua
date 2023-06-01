@@ -1,31 +1,19 @@
 local lsp = require("lsp-zero")
+local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
-  'sumneko_lua',
   'rust_analyzer',
 })
-
--- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
-
 
 lsp.configure('pylsp', {
     settings = {
         pylsp = {
             plugins = {
                 pycodestyle = {
-                    maxLineLength = 150,
+                    maxLineLength = 200,
 
                 },
                 mccabe = {
@@ -36,6 +24,22 @@ lsp.configure('pylsp', {
     }
 })
 
+
+lsp.configure('eslint', {
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    maxLineLength = 200,
+
+                },
+                mccabe = {
+                    threshold = 100,
+                }
+            }
+        }
+    }
+})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}

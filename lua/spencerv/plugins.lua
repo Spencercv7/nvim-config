@@ -13,28 +13,18 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
   use {
-    "loctvl842/monokai-pro.nvim",
-    config = function()
-        require("monokai-pro").setup()
-    end
+    'sainnhe/gruvbox-material',
   }
 
+if not vim.g.vscode then
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
+
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
-  use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
 
@@ -99,6 +89,18 @@ return require('packer').startup(function(use)
           { 'rmagatti/goto-preview', config = function() require('goto-preview').setup {} end } --optional
       }
   }
+
+
+  use {
+      'majutsushi/tagbar',
+  }
+
+  use {
+      'prettier/vim-prettier',
+      run = 'yarn install',
+      ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
+    }
+end
 
 end)
 

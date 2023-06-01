@@ -1,6 +1,7 @@
 require("spencerv.set")
-require("spencerv.remap")
 require("spencerv.plugins")
+require("spencerv.remap")
+require("spencerv.vsremap")
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
@@ -29,6 +30,10 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
+
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+vim.cmd([[colorscheme gruvbox-material]])
+vim.g.vscode_neovim_use_vim_mode = 1
