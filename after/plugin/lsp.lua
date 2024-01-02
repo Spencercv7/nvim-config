@@ -8,6 +8,7 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
+
 lsp.configure('pylsp', {
     settings = {
         pylsp = {
