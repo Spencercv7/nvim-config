@@ -16,3 +16,21 @@ lspconfig.lua_ls.setup {
   capabilities = capabilities,
   filetypes = {"lua"},
 }
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    }
+  },
+  filetypes = {"typescript, javascript", "typescriptreact", "javascriptreact"},
+}
+
+lspconfig.yamlls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"yaml"}
+}
+

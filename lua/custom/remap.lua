@@ -28,8 +28,8 @@ M.abc = {
     ["<leader>w"] = { "<cmd> NvimTreeFindFileToggle <CR>" },
 
     -- Delete Remaps
-    ["dd"] = { "_dd" },
-    ["d"] = { "_d" },
+    -- ["dd"] = { "_dd" },
+    -- ["d"] = { "_d" },
 
     -- center when jumping whitespace
     ["{"] = { "{zz" },
@@ -46,10 +46,22 @@ M.abc = {
     ["U"] = { "<cmd>redo<CR>" },
 
     -- paste from clipboard
-    ["<leader>P"] = {"+p"},
+    ["<leader>P"] = { "+p" },
 
     -- yank to clipboard
-    ["<leader>y"] = {"+y"}
+    ["<leader>y"] = { "+y" },
+
+    ["<leader>K"] = {
+      function()
+        vim.lsp.buf.hover()
+      end
+    },
+
+    ["<leader>J"] = {
+      function()
+        require('cmp').mapping.complete()
+      end
+    },
   },
 
   v = {
@@ -58,10 +70,10 @@ M.abc = {
     ["K"] = { ":m '<-2<CR>gv=gv" },
 
     -- paste from clipboard
-    ["<leader>P"] = {"+p"},
+    ["<leader>P"] = { "+p" },
 
     -- yank to clipboard
-    ["<leader>y"] = {"+y"}
+    ["<leader>y"] = { "+y" },
   },
 }
 

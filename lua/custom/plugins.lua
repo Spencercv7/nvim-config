@@ -9,6 +9,9 @@ local plugins = {
         "lua-language-server",
         "eslint-lsp",
         "stylua",
+        "prettier",
+        "typescript-language-server",
+        "yaml-language-server",
       },
     },
   },
@@ -34,6 +37,14 @@ local plugins = {
         detection_methods = { "pattern" },
         patterns = { ".proot" },
       }
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {}
     end,
   },
 }

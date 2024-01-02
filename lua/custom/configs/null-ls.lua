@@ -7,7 +7,7 @@ local sources = {
     -- General
     formatting.prettier,
     formatting.stylua,
-    formatting.eslint,
+    lint.eslint,
     lint.shellcheck,
 
     -- Python
