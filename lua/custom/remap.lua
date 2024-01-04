@@ -1,25 +1,5 @@
+-- Function to open a new tmux pane to the right and launch nvim
 local M = {}
-
--- In order to disable a default keymap, use
--- M.disabled = {
---  n = {
---      ["<leader>h"] = "",
---      ["<C-a>"] = ""
---  }
---}
---
----- Your custom mappings
---M.abc = {
---  n = {
---     ["<C-n>"] = {"<cmd> Telescope <CR>", "Telescope"},
---     ["<C-s>"] = {":Telescope Files <CR>", "Telescope Files"}
---  },
---
---  i = {
---     ["jk"] = { "<ESC>", "escape insert mode" , opts = { nowait = true }},
---    -- ...
---  }
---}
 
 M.abc = {
   n = {
@@ -54,14 +34,20 @@ M.abc = {
     ["<leader>K"] = {
       function()
         vim.lsp.buf.hover()
-      end
+      end,
     },
 
     ["<leader>J"] = {
       function()
-        require('cmp').mapping.complete()
-      end
+        require("").mapping.complete()
+      end,
     },
+
+    -- Copy current file path
+    ["<leader>cp"] = { ":lua vim.fn.setreg('+', vim.fn.expand('%:p'))<CR>" },
+
+    -- Start a new tmux pane to the right with the same root dir.
+    ["<leader>q"] = { ":lua open_workspace()<CR>" },
   },
 
   v = {

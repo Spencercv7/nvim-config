@@ -12,6 +12,7 @@ local plugins = {
         "prettier",
         "typescript-language-server",
         "yaml-language-server",
+        "gopls",
       },
     },
   },
@@ -45,6 +46,15 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup {}
+    end,
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("toggleterm").setup({
+        size = 20,
+        direction = "float"
+      })
     end,
   },
 }

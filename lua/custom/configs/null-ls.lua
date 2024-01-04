@@ -13,7 +13,12 @@ local sources = {
     -- Python
     lint.mypy,
     lint.ruff,
-    formatting.black
+    formatting.black,
+
+    -- Go
+    formatting.gofumpt,
+    formatting.goimports_reviser,
+    formatting.golines
 }
 
 null_ls.setup {
