@@ -51,3 +51,8 @@ lspconfig.gopls.setup {
   }
 }
 
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"javascript, typescript, css, scss"}
+}

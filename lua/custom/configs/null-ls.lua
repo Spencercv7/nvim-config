@@ -14,11 +14,12 @@ local sources = {
     lint.mypy,
     lint.ruff,
     formatting.black,
+    formatting.isort,
 
     -- Go
     formatting.gofumpt,
     formatting.goimports_reviser,
-    formatting.golines
+    formatting.golines,
 }
 
 null_ls.setup {
